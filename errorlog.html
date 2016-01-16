@@ -1,0 +1,51 @@
+<p>Error on Jan 13, 2016 15:10PM - call_user_func_array() expects parameter 1 to be a valid callback, class 'Controllers\Entradas' does not have a method 'index' in /home/ubuntu/workspace/app/Core/Router.php on line 126</p><p>Error on Jan 13, 2016 16:35PM - Missing argument 1 for Controllers\Entradas::edit() in /home/ubuntu/workspace/app/Controllers/Entradas.php on line 70</p><p>Error on Jan 13, 2016 16:41PM - Missing argument 2 for Models\Entradas::updateEntrada(), called in /home/ubuntu/workspace/app/Controllers/Entradas.php on line 91 and defined in /home/ubuntu/workspace/app/Models/Entradas.php on line 20</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jan 14, 2016 7:50AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[HY000] [1049] Unknown database 'yunbit'</p>
+
+           <p><strong>Code:</strong> 1049</p>
+
+           <p><strong>File:</strong> /home/ubuntu/workspace/app/Helpers/Database.php</p>
+
+           <p><strong>Line:</strong> 61</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 /home/ubuntu/workspace/app/Helpers/Database.php(61): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/app/Core/Model.php(33): Helpers\Database::get()
+#2 /home/ubuntu/workspace/app/Models/Entradas.php(9): Core\Model->__construct()
+#3 /home/ubuntu/workspace/app/Controllers/Entradas.php(31): Models\Entradas->__construct()
+#4 /home/ubuntu/workspace/app/Core/Router.php(124): Controllers\Entradas->__construct(NULL)
+#5 /home/ubuntu/workspace/app/Core/Router.php(217): Core\Router::invokeObject('Controllers\Ent...')
+#6 /home/ubuntu/workspace/app/Core/routes.php(32): Core\Router::dispatch()
+#7 /home/ubuntu/workspace/index.php(81): require('/home/ubuntu/wo...')
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jan 14, 2016 7:51AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42S02]: Base table or view not found: 1146 Table 'c9.entradashastags' doesn't exist</p>
+
+           <p><strong>Code:</strong> 42</p>
+
+           <p><strong>File:</strong> /home/ubuntu/workspace/app/Helpers/Database.php</p>
+
+           <p><strong>Line:</strong> 104</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 /home/ubuntu/workspace/app/Helpers/Database.php(104): PDOStatement->execute()
+#1 /home/ubuntu/workspace/app/Models/Entradashastags.php(17): Helpers\Database->select('SELECT id,tag_i...', Array)
+#2 /home/ubuntu/workspace/app/Controllers/Entradas.php(103): Models\Entradashastags->getIdsTags('1')
+#3 [internal function]: Controllers\Entradas->edit('1')
+#4 /home/ubuntu/workspace/app/Core/Router.php(126): call_user_func_array(Array, Array)
+#5 /home/ubuntu/workspace/app/Core/Router.php(254): Core\Router::invokeObject('Controllers\Ent...', Array)
+#6 /home/ubuntu/workspace/app/Core/routes.php(32): Core\Router::dispatch()
+#7 /home/ubuntu/workspace/index.php(81): require('/home/ubuntu/wo...')
+#8 {main}</pre>
+
+           <hr />
+<p>Error on Jan 14, 2016 9:58AM - Invalid argument supplied for foreach() in /home/ubuntu/workspace/app/views/entradas/edit.php on line 30</p>
